@@ -30,10 +30,10 @@ export const SearchInput = styled.TextInput`
 export const PetGrid = styled.FlatList``;
 
 export const PetCard = styled.View`
-  background-color: green;
   margin: 8px;
   border-radius: 5px;
   padding: 12px;
+  border: 1px;
 `;
 
 export const PetTitle = styled.Text`

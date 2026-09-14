@@ -10,8 +10,6 @@ import {
   TopBar,
 } from "./styles";
 
-const [search, setSearch] = useState("");
-
 export interface Pet {
   id: number;
   name: string;
@@ -37,14 +35,17 @@ export const PET_MOCK = [
 ];
 
 export function HomeScreen() {
+  const [_pets, _setPets] = useState<Pet[]>([]);
+  const [_search, _setSearch] = useState("");
+
   return (
     <ScreenContainer>
       <TopBar>
         <ScreenTitle>Patient Search</ScreenTitle>
         <SearchInput
           placeholder="Search pet by name..."
-          value={search}
-          onChangeText={setSearch}
+          // value={search}
+          // onChangeText={setSearch}
         />
 
         <PetGrid
