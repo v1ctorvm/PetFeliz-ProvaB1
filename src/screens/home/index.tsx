@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   PetCard,
   PetGrid,
@@ -35,8 +34,15 @@ export const PET_MOCK = [
 ];
 
 export function HomeScreen() {
-  const [_pets, _setPets] = useState<Pet[]>([]);
-  const [_search, _setSearch] = useState("");
+  //   const [pets, setPets] = useState<Pet[]>([]);
+  //   const [search, setSearch] = useState("");
+
+  //   const filteredProducts = pets.filter(
+  //     (pets) => search.toLowerCase;
+  //   );
+
+  //   // useEffect setSearch
+  //   []);
 
   return (
     <ScreenContainer>
