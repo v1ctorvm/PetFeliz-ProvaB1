@@ -1,12 +1,16 @@
+import { useState } from "react";
 import {
+  PetCard,
   PetGrid,
+  PetSpecies,
+  PetTitle,
   ScreenContainer,
   ScreenTitle,
   SearchInput,
   TopBar,
 } from "./styles";
 
-// const [search, setSearch] = useState("");
+const [search, setSearch] = useState("");
 
 export interface Pet {
   id: number;
@@ -39,11 +43,20 @@ export function HomeScreen() {
         <ScreenTitle>Patient Search</ScreenTitle>
         <SearchInput
           placeholder="Search pet by name..."
-          // value={search}
-          // onChangeText={setSearch}
+          value={search}
+          onChangeText={setSearch}
         />
 
-        <PetGrid></PetGrid>
+        <PetGrid
+          data={PET_MOCK}
+          renderItem={({ item }) => (
+            <PetCard>
+              <PetTitle>{item.name}</PetTitle>
+              <PetSpecies>{item.species}</PetSpecies>
+            </PetCard>
+          )}
+          keyExtractor={(item) => item.id}
+        />
       </TopBar>
     </ScreenContainer>
   );

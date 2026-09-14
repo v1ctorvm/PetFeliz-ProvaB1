@@ -31,9 +31,18 @@ export const PetGrid = styled.FlatList``;
 
 export const PetCard = styled.View`
   background-color: green;
+  margin: 8px;
+  border-radius: 5px;
+  padding: 12px;
 `;
 
 export const PetTitle = styled.Text`
   font-size: 24px;
+  font-weight: 500;
+`;
+
+export const PetSpecies = styled.Text`
+  font-size: 18px;
   font-weight: 400;
+  color: #817b7b;
 `;
