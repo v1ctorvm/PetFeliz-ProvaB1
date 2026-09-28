@@ -63,6 +63,7 @@ export function HomeScreen() {
             </PetCard>
           )}
           keyExtractor={(item) => item.id}
+          ListEmptyComponent={<PetTitle>Nenhum pet cadastrado.</PetTitle>}
         />
       </TopBar>
     </ScreenContainer>
